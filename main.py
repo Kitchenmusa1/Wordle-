@@ -333,6 +333,10 @@ number_guesses = 6
 while guess != x:
     print("Put in a 5 letter word to see if it matches the correct answer")
     guess = input()
+    while len(guess) != len(x):
+        print ("Your guess is invalid, try again")
+        guess = input()
+ 
     if guess == x:
         print ("Game over")
 
